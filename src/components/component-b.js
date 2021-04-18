@@ -38,6 +38,14 @@ css(component_b_container, {
 
 window.addEventListener('load', (event) => {
 
+    //task 4
+    if (localStorage.getItem("component-b-classes") !== null && localStorage.getItem("component-b-classes").includes("lightpink") === true) {
+        const component_b = document.querySelector('#component-b');
+        const component_a = document.querySelector('#component-a');
+        component_b.classList.add("bg-lightpink");
+        component_a.classList.remove("bg-lightpink");
+    }
+
     //task 3
     const component_b_btn = document.querySelector('.component-b-btn');
     component_b_btn.addEventListener('click', changeColor);

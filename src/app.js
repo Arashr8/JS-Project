@@ -29,3 +29,13 @@ document.body.appendChild(componentA);
 var componentB = document.createElement('script');
 componentB.src = 'components/component-b.js';
 document.body.appendChild(componentB);
+
+//task 4
+window.addEventListener("beforeunload", function(event) {
+    const component_a = document.querySelector('#component-a');
+    const component_b = document.querySelector('#component-b');
+    var classListA = component_a.className;
+    var classListB = component_b.className;
+    localStorage.setItem("component-a-classes", classListA);
+    localStorage.setItem("component-b-classes", classListB);
+});
