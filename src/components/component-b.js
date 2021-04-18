@@ -3,7 +3,7 @@ var template = function(props) {
     return `
 	<div id="component-b" class="component">
     <div class="component-b-container">
-	<span class="component-title text-center"> Component B </span>
+	<span id="result" class="component-title text-center"> Component B </span>
     <button class="btn component-b-btn">change color</button>
     </div>
 	</div>

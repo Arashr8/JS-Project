@@ -4,6 +4,7 @@ var template = function(props) {
 	<div class="component-a-container">
 	<span class="component-title text-center"> Component A </span>
     <button class="btn component-a-btn">change color</button>
+    <input type="text" id="source">
     </div>
 	</div>
 	`;
@@ -53,5 +54,18 @@ window.addEventListener('load', (event) => {
         component_a.classList.add("bg-lightpink");
         component_b.classList.remove("bg-lightpink");
     }
+
+
+    //task 5
+    const source = document.getElementById('source');
+    const result = document.getElementById('result');
+
+    const inputHandler = function(e) {
+        result.innerHTML = e.target.value;
+    }
+
+    source.addEventListener('input', inputHandler);
+    source.addEventListener('propertychange', inputHandler); // for IE8
+
 
 });
