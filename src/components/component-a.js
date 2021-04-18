@@ -44,6 +44,7 @@ window.addEventListener('load', (event) => {
         component_a.classList.add("bg-lightpink");
         component_b.classList.remove("bg-lightpink");
     }
+
     //task 3
     const component_a_btn = document.querySelector('.component-a-btn');
     component_a_btn.addEventListener('click', changeColor);
