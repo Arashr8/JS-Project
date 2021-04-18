@@ -43,3 +43,23 @@ window.addEventListener("beforeunload", function(event) {
     const component_b_content = document.querySelector('#component-b span').textContent;
     localStorage.setItem("component-b-content", component_b_content);
 });
+
+//task 7 
+const mediaQuery = window.matchMedia('(max-width: 500px)')
+
+function handleTabletChange(e) {
+    if (e.matches) {
+        const container = document.querySelector('#app');
+        css(container, {
+            display: 'block'
+        });
+    } else {
+        css(container, {
+            display: 'flex'
+        });
+    }
+}
+
+mediaQuery.addEventListener("change", () => {
+    handleTabletChange(mediaQuery);
+});
