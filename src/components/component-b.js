@@ -1,9 +1,14 @@
 var template = function(props) {
 
+    if (localStorage.getItem("component-b-content") !== null) {
+        var span_content = localStorage.getItem("component-b-content");
+    } else {
+        var span_content = 'Component B';
+    }
     return `
 	<div id="component-b" class="component">
     <div class="component-b-container">
-	<span id="result" class="component-title text-center"> Component B </span>
+	<span id="result" class="component-title text-center"> ${ span_content } </span>
     <button class="btn component-b-btn">change color</button>
     </div>
 	</div>

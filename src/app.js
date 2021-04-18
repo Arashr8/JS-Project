@@ -38,4 +38,8 @@ window.addEventListener("beforeunload", function(event) {
     var classListB = component_b.className;
     localStorage.setItem("component-a-classes", classListA);
     localStorage.setItem("component-b-classes", classListB);
+
+    //task 6
+    const component_b_content = document.querySelector('#component-b span').textContent;
+    localStorage.setItem("component-b-content", component_b_content);
 });
